@@ -52,8 +52,7 @@ export default class CategoryList extends Component {
                 className={`w-full cursor-pointer rounded-lg border-b border-gray-200 px-4 py-2 hover:bg-blue-800 hover:text-white ${
                   categorySelected === category.nama && "category-active"
                 }`}
-                onClick={() => changeCategory(category.nama)}
-              >
+                onClick={() => changeCategory(category.nama)}>
                 <p className="text-lg">
                   <Icon nama={category.nama} />
                   {category.nama}

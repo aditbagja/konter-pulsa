@@ -5,6 +5,7 @@ import Navigation from "./component/Navigation";
 import { API_URL } from "./utils/constants";
 import axios from "axios";
 import Menus from "./component/Menus";
+import swal from "sweetalert";
 
 export default class App extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ export default class App extends Component {
     this.state = {
       menus: [],
       categorySelected: "Pulsa",
+      keranjang: [],
     };
   }
   componentDidMount() {
@@ -25,6 +27,30 @@ export default class App extends Component {
       .catch((error) => {
         console.log(error);
       });
+
+    axios
+      .get(API_URL + "keranjang")
+      .then((res) => {
+        const keranjang = res.data;
+        this.setState({ keranjang });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  componentDidUpdate(prevState) {
+    if (this.state.keranjang !== prevState.keranjang) {
+      axios
+        .get(API_URL + "keranjang")
+        .then((res) => {
+          const keranjang = res.data;
+          this.setState({ keranjang });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }
 
   changeCategory = (value) => {
@@ -42,8 +68,60 @@ export default class App extends Component {
         console.log(error);
       });
   };
+
+  masukKeranjang = (value) => {
+    axios
+      .get(API_URL + "keranjang?product.id=" + value.id)
+      .then((res) => {
+        if (res.data.length === 0) {
+          const keranjang = {
+            jumlah: 1,
+            total_harga: value.harga,
+            product: value,
+          };
+          axios
+            .post(API_URL + "keranjang", keranjang)
+            .then((res) => {
+              swal({
+                title: "Sukses",
+                text: keranjang.product.nama + " Sukses masuk keranjang",
+                icon: "success",
+                button: false,
+                timer: 1500,
+              });
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        } else {
+          const keranjang = {
+            jumlah: res.data[0].jumlah + 1,
+            total_harga: res.data[0].total_harga + value.harga,
+            product: value,
+          };
+
+          axios
+            .put(API_URL + "keranjang/" + res.data[0].id, keranjang)
+            .then((res) => {
+              swal({
+                title: "Sukses",
+                text: keranjang.product.nama + " Sukses masuk keranjang",
+                icon: "success",
+                button: false,
+                timer: 1500,
+              });
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   render() {
-    const { menus, categorySelected } = this.state;
+    const { menus, categorySelected, keranjang } = this.state;
     return (
       <>
         <Navigation />
@@ -58,11 +136,15 @@ export default class App extends Component {
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-2">
               {menus.map((menu) => (
-                <Menus key={menu.id} menu={menu} />
+                <Menus
+                  key={menu.id}
+                  menu={menu}
+                  masukKeranjang={this.masukKeranjang}
+                />
               ))}
             </div>
           </div>
-          <Hasil />
+          <Hasil keranjang={keranjang} />
         </div>
       </>
     );

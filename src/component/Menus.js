@@ -1,9 +1,9 @@
 import React from "react";
 import { numberWithCommas } from "../utils/utils";
 
-const Menus = ({ menu }) => {
+const Menus = ({ menu, masukKeranjang }) => {
   return (
-    <div className="lg:w-1/4">
+    <div className="lg:w-1/4" onClick={() => masukKeranjang(menu)}>
       <div className="max-w-xs overflow-hidden rounded shadow-lg lg:h-72">
         <img
           className="w-full"

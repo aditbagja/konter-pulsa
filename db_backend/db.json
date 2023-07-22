@@ -1,161 +1,212 @@
 {
-    "categories":[
-        {
-            "id": 1,
-            "nama": "Pulsa"
-        },
-        {
-            "id": 2,
-            "nama": "Paket Data"
+  "categories": [
+    {
+      "id": 1,
+      "nama": "Pulsa"
+    },
+    {
+      "id": 2,
+      "nama": "Paket Data"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "kode": "P-01",
+      "nama": "Pulsa 5000",
+      "harga": 5500,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 2,
+      "kode": "P-02",
+      "nama": "Pulsa 10000",
+      "harga": 10500,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 3,
+      "kode": "P-03",
+      "nama": "Pulsa 15000",
+      "harga": 15500,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 4,
+      "kode": "P-04",
+      "nama": "Pulsa 20000",
+      "harga": 20500,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 5,
+      "kode": "P-05",
+      "nama": "Pulsa 30000",
+      "harga": 30500,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 6,
+      "kode": "P-06",
+      "nama": "Pulsa 40000",
+      "harga": 40500,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 7,
+      "kode": "P-07",
+      "nama": "Pulsa 50000",
+      "harga": 55000,
+      "is_ready": true,
+      "image": "pulsa.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Pulsa"
+      }
+    },
+    {
+      "id": 8,
+      "kode": "D-01",
+      "nama": "Paket Data 10GB/1Hari",
+      "harga": 10000,
+      "is_ready": true,
+      "image": "paket data.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Paket Data"
+      }
+    },
+    {
+      "id": 9,
+      "kode": "D-02",
+      "nama": "Paket Data 10GB/7Hari",
+      "harga": 20000,
+      "is_ready": true,
+      "image": "paket data.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Paket Data"
+      }
+    },
+    {
+      "id": 10,
+      "kode": "D-03",
+      "nama": "Paket Data 10GB/30Hari",
+      "harga": 50000,
+      "is_ready": true,
+      "image": "paket data.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Paket Data"
+      }
+    },
+    {
+      "id": 11,
+      "kode": "D-04",
+      "nama": "Paket Data 15GB/30Hari",
+      "harga": 80000,
+      "is_ready": true,
+      "image": "paket data.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Paket Data"
+      }
+    },
+    {
+      "id": 12,
+      "kode": "D-05",
+      "nama": "Paket Data 25GB/30Hari",
+      "harga": 100000,
+      "is_ready": true,
+      "image": "paket data.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Paket Data"
+      }
+    }
+  ],
+  "keranjang": [
+    {
+      "jumlah": 7,
+      "total_harga": 38500,
+      "product": {
+        "id": 1,
+        "kode": "P-01",
+        "nama": "Pulsa 5000",
+        "harga": 5500,
+        "is_ready": true,
+        "image": "pulsa.jpeg",
+        "category": {
+          "id": 1,
+          "nama": "Pulsa"
         }
-        
-    ],
-    "products":[
-        {
-            "id": 1,
-            "kode": "P-01",
-            "nama": "Pulsa 5000",
-            "harga": 5500,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 2,
-            "kode": "P-02",
-            "nama": "Pulsa 10000",
-            "harga": 10500,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 3,
-            "kode": "P-03",
-            "nama": "Pulsa 15000",
-            "harga": 15500,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 4,
-            "kode": "P-04",
-            "nama": "Pulsa 20000",
-            "harga": 20500,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 5,
-            "kode": "P-05",
-            "nama": "Pulsa 30000",
-            "harga": 30500,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 6,
-            "kode": "P-06",
-            "nama": "Pulsa 40000",
-            "harga": 40500,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 7,
-            "kode": "P-07",
-            "nama": "Pulsa 50000",
-            "harga": 55000,
-            "is_ready": true,
-            "image": "pulsa.jpeg",
-            "category":{
-                "id": 1,
-                "nama": "Pulsa"
-            }
-        },
-        {
-            "id": 8,
-            "kode": "D-01",
-            "nama": "Paket Data 10GB/1Hari",
-            "harga": 10000,
-            "is_ready": true,
-            "image": "paket data.jpg",
-            "category":{
-                "id": 2,
-                "nama": "Paket Data"
-            }
-        },
-        {
-            "id": 9,
-            "kode": "D-02",
-            "nama": "Paket Data 10GB/7Hari",
-            "harga": 20000,
-            "is_ready": true,
-            "image": "paket data.jpg",
-            "category":{
-                "id": 2,
-                "nama": "Paket Data"
-            }
-        },
-        {
-            "id": 10,
-            "kode": "D-03",
-            "nama": "Paket Data 10GB/30Hari",
-            "harga": 50000,
-            "is_ready": true,
-            "image": "paket data.jpg",
-            "category":{
-                "id": 2,
-                "nama": "Paket Data"
-            }
-        },
-        {
-            "id": 11,
-            "kode": "D-04",
-            "nama": "Paket Data 15GB/30Hari",
-            "harga": 80000,
-            "is_ready": true,
-            "image": "paket data.jpg",
-            "category":{
-                "id": 2,
-                "nama": "Paket Data"
-            }
-        },
-        {
-            "id": 12,
-            "kode": "D-05",
-            "nama": "Paket Data 25GB/30Hari",
-            "harga": 100000,
-            "is_ready": true,
-            "image": "paket data.jpg",
-            "category":{
-                "id": 2,
-                "nama": "Paket Data"
-            }
+      },
+      "id": 1
+    },
+    {
+      "jumlah": 4,
+      "total_harga": 42000,
+      "product": {
+        "id": 2,
+        "kode": "P-02",
+        "nama": "Pulsa 10000",
+        "harga": 10500,
+        "is_ready": true,
+        "image": "pulsa.jpeg",
+        "category": {
+          "id": 1,
+          "nama": "Pulsa"
         }
-    ],
-    "keranjang":[],
-    "pesanan":[]
+      },
+      "id": 2
+    },
+    {
+      "jumlah": 2,
+      "total_harga": 20000,
+      "product": {
+        "id": 8,
+        "kode": "D-01",
+        "nama": "Paket Data 10GB/1Hari",
+        "harga": 10000,
+        "is_ready": true,
+        "image": "paket data.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Paket Data"
+        }
+      },
+      "id": 3
+    }
+  ],
+  "pesanan": []
 }
