@@ -14,12 +14,10 @@ function NavList() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-medium"
-      >
+        className="p-1 font-medium">
         <a
           href="#"
-          className="flex items-center transition-colors hover:text-blue-500"
-        >
+          className="flex items-center transition-colors hover:text-blue-500">
           Pulsa
         </a>
       </Typography>
@@ -27,12 +25,10 @@ function NavList() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-medium"
-      >
+        className="p-1 font-medium">
         <a
           href="#"
-          className="flex items-center transition-colors hover:text-blue-500"
-        >
+          className="flex items-center transition-colors hover:text-blue-500">
           Paket Data
         </a>
       </Typography>
@@ -61,9 +57,8 @@ const Navigation = () => {
           as="a"
           href="/"
           variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
-        >
-          Pulsaku
+          className="mr-4 cursor-pointer py-1.5">
+          KonterPulsa
         </Typography>
         <div className="hidden lg:block">
           <NavList />
@@ -72,8 +67,7 @@ const Navigation = () => {
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
-          onClick={() => setOpenNav(!openNav)}
-        >
+          onClick={() => setOpenNav(!openNav)}>
           {openNav ? (
             <XMarkIcon className="h-6 w-6" strokeWidth={2} />
           ) : (
